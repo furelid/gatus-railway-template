@@ -1,4 +1,4 @@
-default-endpoint: &defaults
+default-endpoint: &defaults-endpoint
   group: domain-checks
   interval: 1h
   conditions:
@@ -9,28 +9,28 @@ default-endpoint: &defaults
 endpoints:
   - name: domain-exp-512area
     url: https://512area.com/
-    <<: *defaults
+    <<: *defaults-endpoint
   - name: domain-exp-best-no-deposit-casino-bonus
     url: https://best-no-deposit-casino-bonus.com/
-    <<: *defaults
+    <<: *defaults-endpoint
   - name: domain-exp-bingofreedeposit
     url: https://bingofreedeposit.com/
-    <<: *defaults
+    <<: *defaults-endpoint
   - name: domain-exp-freshology
     url: https://freshology.com/
-    <<: *defaults
+    <<: *defaults-endpoint
   - name: domain-exp-gamingstreet
     url: https://gamingstreet.com/
-    <<: *defaults
+    <<: *defaults-endpoint
   - name: domain-exp-globalpropertysystems
     url: https://globalpropertysystems.com/
-    <<: *defaults
+    <<: *defaults-endpoint
   - name: domain-exp-lotsballoonfest
     url: https://lotsballoonfest.com/
-    <<: *defaults
+    <<: *defaults-endpoint
   - name: domain-exp-rockheadsciences
     url: https://rockheadsciences.com/
-    <<: *defaults
+    <<: *defaults-endpoint
   - name: domain-exp-thewireplan
     url: https://thewireplan.com/
-    <<: *defaults
+    <<: *defaults-endpoint

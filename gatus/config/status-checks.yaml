@@ -1,4 +1,4 @@
-default-endpoint: &defaults
+default-status: &defaults-status
   group: status-checks
   interval: 5m
   conditions:
@@ -9,28 +9,28 @@ default-endpoint: &defaults
 endpoints:
   - name: status-512area
     url: https://512area.com/
-    <<: *defaults
+    <<: *defaults-status
   - name: status-best-no-deposit-casino-bonus
     url: https://best-no-deposit-casino-bonus.com/
-    <<: *defaults
+    <<: *defaults-status
   - name: status-bingofreedeposit
     url: https://bingofreedeposit.com/
-    <<: *defaults
+    <<: *defaults-status
   - name: status-freshology
     url: https://freshology.com/
-    <<: *defaults
+    <<: *defaults-status
   - name: status-gamingstreet
     url: https://gamingstreet.com/
-    <<: *defaults
+    <<: *defaults-status
   - name: status-globalpropertysystems
     url: https://globalpropertysystems.com/
-    <<: *defaults
+    <<: *defaults-status
   - name: status-lotsballoonfest
     url: https://lotsballoonfest.com/
-    <<: *defaults
+    <<: *defaults-status
   - name: status-rockheadsciences
     url: https://rockheadsciences.com/
-    <<: *defaults
+    <<: *defaults-status
   - name: status-thewireplan
     url: https://thewireplan.com/
-    <<: *defaults
+    <<: *defaults-status
