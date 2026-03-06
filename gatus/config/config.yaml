@@ -1,0 +1,34 @@
+# Gatus configuration file
+endpoints:
+  - name: website
+    url: https://twin.sh/health
+    interval: 5m
+    conditions:
+      - "[STATUS] == 200"
+    alerts:
+      - type: slack
+
+  - name: freshology
+    url: https://freshology.com/
+    interval: 10s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 1100"
+    alerts:
+      - type: slack
+
+  - name: github
+    url: https://api.github.com/healthz
+    interval: 5m
+    conditions:
+      - "[STATUS] == 200"
+    alerts:
+      - type: slack
+
+  - name: check-domain-expiration
+    url: "https://freshology.com/"
+    interval: 1h
+    conditions:
+      - "[DOMAIN_EXPIRATION] > 720h"
+    alerts:
+      - type: slack

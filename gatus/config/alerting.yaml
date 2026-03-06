@@ -1,0 +1,9 @@
+alerting:
+  slack:
+    webhook-url: ${SLACK_WEBHOOK_URL}
+    title: "Gatus Alert"
+    default-alert:
+      description: "health check failed"
+      send-on-resolved: true
+      failure-threshold: 5
+      success-threshold: 5
