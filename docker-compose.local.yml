@@ -1,10 +1,3 @@
-x-postgresql-variables: &postgresql-variables
-  POSTGRES_HOST: ${POSTGRES_HOST}
-  POSTGRES_PORT: ${POSTGRES_PORT}
-  POSTGRES_DB: ${POSTGRES_DB}
-  POSTGRES_USER: ${POSTGRES_USER}
-  POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-
 services:
   database:
     container_name: postgres
@@ -14,7 +7,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      <<: *postgresql-variables
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     networks:
       - gatus_network
     healthcheck:
@@ -29,7 +24,7 @@ services:
       context: ./gatus
       dockerfile: Dockerfile
     environment:
-      <<: *postgresql-variables
+      DATABASE_URL: "postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}"
     ports:
       - "8080:8080"
     volumes:
