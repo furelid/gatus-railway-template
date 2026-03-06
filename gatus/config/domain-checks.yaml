@@ -3,6 +3,7 @@ default-endpoint: &defaults-endpoint
   interval: 1h
   conditions:
     - "[DOMAIN_EXPIRATION] > 720h"
+    - "[CERTIFICATE_EXPIRATION] > 240h"
   alerts:
     - type: slack
     

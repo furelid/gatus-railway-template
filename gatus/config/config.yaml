@@ -15,3 +15,6 @@
 
 # config.yaml
 # main configuration file for Gatus
+
+ui:
+  default-sort-by: group
