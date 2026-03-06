@@ -1,8 +1,11 @@
 ARG VERSION=v5.35.0
 
-# Gatus a
+# Gatus image with config files
 FROM twinproduction/gatus:${VERSION} AS builder
+
 COPY config/ /config/
+
+
 # # Build the final image, with sh
 # FROM alpine:latest
 # WORKDIR /app

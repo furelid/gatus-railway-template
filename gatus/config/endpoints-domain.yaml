@@ -1,0 +1,36 @@
+default-endpoint: &defaults
+  group: domain-checks
+  interval: 1h
+  conditions:
+    - "[DOMAIN_EXPIRATION] > 720h"
+  alerts:
+    - type: slack
+    
+endpoints:
+  - name: domain-exp-512area
+    url: https://512area.com/
+    <<: *defaults
+  - name: domain-exp-best-no-deposit-casino-bonus
+    url: https://best-no-deposit-casino-bonus.com/
+    <<: *defaults
+  - name: domain-exp-bingofreedeposit
+    url: https://bingofreedeposit.com/
+    <<: *defaults
+  - name: domain-exp-freshology
+    url: https://freshology.com/
+    <<: *defaults
+  - name: domain-exp-gamingstreet
+    url: https://gamingstreet.com/
+    <<: *defaults
+  - name: domain-exp-globalpropertysystems
+    url: https://globalpropertysystems.com/
+    <<: *defaults
+  - name: domain-exp-lotsballoonfest
+    url: https://lotsballoonfest.com/
+    <<: *defaults
+  - name: domain-exp-rockheadsciences
+    url: https://rockheadsciences.com/
+    <<: *defaults
+  - name: domain-exp-thewireplan
+    url: https://thewireplan.com/
+    <<: *defaults

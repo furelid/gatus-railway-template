@@ -1,34 +1,17 @@
-# Gatus configuration file
-endpoints:
-  - name: website
-    url: https://twin.sh/health
-    interval: 5m
-    conditions:
-      - "[STATUS] == 200"
-    alerts:
-      - type: slack
+# alerting.yaml
+# contains the configuration for the alerting mechanism of Gatus.
 
-  - name: freshology
-    url: https://freshology.com/
-    interval: 10s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 1100"
-    alerts:
-      - type: slack
+# endpoints-domain.yaml
+# contains the configuration for the domain expiration checks of Gatus.
 
-  - name: github
-    url: https://api.github.com/healthz
-    interval: 5m
-    conditions:
-      - "[STATUS] == 200"
-    alerts:
-      - type: slack
+# endpoints-status.yaml
+# contains the configuration for the status checks of Gatus.
 
-  - name: check-domain-expiration
-    url: "https://freshology.com/"
-    interval: 1h
-    conditions:
-      - "[DOMAIN_EXPIRATION] > 720h"
-    alerts:
-      - type: slack
+# metrics.yaml
+# contains the configuration for the metrics of Gatus.
+
+# storage.yaml
+# contains the configuration for the storage of Gatus.
+
+# config.yaml
+# main configuration file for Gatus

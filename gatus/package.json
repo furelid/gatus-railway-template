@@ -1,0 +1,21 @@
+{
+  "name": "gatus",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "ts-node src/handle-configs.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.26.2",
+  "dependencies": {
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.6",
+    "@types/node": "^24",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

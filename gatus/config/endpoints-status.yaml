@@ -1,0 +1,36 @@
+default-endpoint: &defaults
+  group: status-checks
+  interval: 5m
+  conditions:
+    - "[STATUS] == 200"
+  alerts:
+    - type: slack
+
+endpoints:
+  - name: status-512area
+    url: https://512area.com/
+    <<: *defaults
+  - name: status-best-no-deposit-casino-bonus
+    url: https://best-no-deposit-casino-bonus.com/
+    <<: *defaults
+  - name: status-bingofreedeposit
+    url: https://bingofreedeposit.com/
+    <<: *defaults
+  - name: status-freshology
+    url: https://freshology.com/
+    <<: *defaults
+  - name: status-gamingstreet
+    url: https://gamingstreet.com/
+    <<: *defaults
+  - name: status-globalpropertysystems
+    url: https://globalpropertysystems.com/
+    <<: *defaults
+  - name: status-lotsballoonfest
+    url: https://lotsballoonfest.com/
+    <<: *defaults
+  - name: status-rockheadsciences
+    url: https://rockheadsciences.com/
+    <<: *defaults
+  - name: status-thewireplan
+    url: https://thewireplan.com/
+    <<: *defaults
