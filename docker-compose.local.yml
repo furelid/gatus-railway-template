@@ -27,7 +27,7 @@ services:
     container_name: gatus
     build:
       context: ./gatus
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     environment:
       <<: *postgresql-variables
     ports:

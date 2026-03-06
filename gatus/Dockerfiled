@@ -8,7 +8,7 @@ FROM alpine:latest
 WORKDIR /app
 COPY --from=builder /gatus /app/gatus
 COPY --from=builder /config/ /app/config/
-# COPY config/ /app/config/
+COPY config/ /app/config/
 
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 

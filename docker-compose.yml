@@ -3,7 +3,7 @@ services:
     container_name: gatus
     build:
       context: ./gatus
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     environment:
       POSTGRES_HOST: ${POSTGRES_HOST}
       POSTGRES_PORT: ${POSTGRES_PORT}
